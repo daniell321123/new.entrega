@@ -1,0 +1,37 @@
+{
+  "type": "module",
+  "name": "adopcion-de-mascotas",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "CNX_STR='mongodb://localhost/adopciones_db_prod' node .",
+    "start:dev": "CNX_STR='mongodb://localhost/adopciones_db_dev' nodemon -e 'js,yaml' node .",
+    "start:test": "CNX_STR='mongodb://localhost/adopciones_db_test' node .",
+    "test": "CNX_STR='mongodb://localhost/adopciones_db_test' mocha --recursive"
+  },
+  "keywords": [],
+  "author": "Jesus",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "express": "latest",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.2.2",
+    "multer": "^1.4.5-lts.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/express": "latest",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "latest",
+    "nodemon": "latest",
+    "supertest": "^6.3.3"
+  },
+  "mocha": {
+    "timeout": 20000,
+    "require": "test/globalHooks.js"
+  }
+}
